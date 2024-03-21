@@ -16,6 +16,11 @@ let stickFrame = 0;
 
 // *note: canvasWidth and canvasHeight will be defined before this script runs)
 
+let imageNoise;
+function preload() {
+    imageNoise = loadImage('noise.webp');
+}
+
 function setup () {
     let main_canvas = createCanvas(canvasWidth,canvasHeight);
     let r = random(100);
@@ -24,7 +29,8 @@ function setup () {
     /* 
     just setting some stuff up for draw_one_frame.js shouldn't break anything dont yell at me k thx
     */
-    colorMode(HSB, 360, 100, 100, 100);
+    // colorMode(HSB, 360, 100, 100, 100);
+    colorMode(RGB);
     // rectMode(CENTER);
     noStroke();
     noSmooth(); // Disables antialising
