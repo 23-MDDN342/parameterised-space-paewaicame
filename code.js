@@ -44,6 +44,7 @@ let buffer;
 
 function setup() {
     let main_canvas = createCanvas(canvasWidth, canvasHeight);
+    main_canvas.mouseClicked(changePreset); // click on the canvas to change colors
     let r = random(100);
     main_canvas.parent('canvasContainer');
     frameRate(24 * buffersPerFrame);
